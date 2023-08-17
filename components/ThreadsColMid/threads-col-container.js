@@ -1,5 +1,5 @@
-import NewThreadInput from "../new-thread-input";
-import Thread from "../thread";
+import NewThreadInput from "./new-thread-input";
+import Thread from "./thread";
 import styles from "./threads-col-container.module.css";
 const ThreadsColContainerColumn = () => {
   return (

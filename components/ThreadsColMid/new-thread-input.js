@@ -1,4 +1,4 @@
-import styles from "./ThreadsColMid/new-thread.module.css";
+import styles from "./new-thread.module.css";
 const NewThreadInput = () => {
   return (
     <div className={styles.newthreadinput}>
