@@ -1,4 +1,3 @@
-import Carousel from "./carousel";
 import styles from "./thread.module.css";
 const Thread = () => {
   return (
@@ -9,16 +8,8 @@ const Thread = () => {
           alt=""
           src="/threadsImages/avatar3.svg"
         />
-        <img
-          className={styles.threadChild}
-          alt=""
-          src="/threadsImages/vector-11.svg"
-        />
-        <img
-          className={styles.avatarIcon1}
-          alt=""
-          src="/threadsImages/avatar4.svg"
-        />
+        <img className={styles.threadChild} alt="" src="/vector-1.svg" />
+        <img className={styles.avatarIcon1} alt="" src="/avatar.svg" />
       </div>
       <div className={styles.infosActions}>
         <div className={styles.infos}>
@@ -37,28 +28,11 @@ const Thread = () => {
             I am excited to share with you my latest projects
           </div>
         </div>
-        <Carousel showCarrossel />
         <div className={styles.actions}>
-          <img
-            className={styles.likeIcon}
-            alt=""
-            src="/threadsImages/like2.svg"
-          />
-          <img
-            className={styles.likeIcon}
-            alt=""
-            src="/threadsImages/comment1.svg"
-          />
-          <img
-            className={styles.likeIcon}
-            alt=""
-            src="/threadsImages/repost1.svg"
-          />
-          <img
-            className={styles.likeIcon}
-            alt=""
-            src="/threadsImages/send3.svg"
-          />
+          <img className={styles.likeIcon} alt="" src="/like.svg" />
+          <img className={styles.likeIcon} alt="" src="/comment.svg" />
+          <img className={styles.likeIcon} alt="" src="/repost.svg" />
+          <img className={styles.likeIcon} alt="" src="/send.svg" />
         </div>
         <div className={styles.respostasECurtidas}>
           <div className={styles.respostas}>7 respostas</div>

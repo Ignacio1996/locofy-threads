@@ -9,21 +9,9 @@ const ThreadsColContainer = () => {
       <div className={styles.thread}>
         <div className={styles.thread1}>
           <div className={styles.thread2}>
-            <img
-              className={styles.avatarIcon}
-              alt=""
-              src="/threadsImages/avatar5.svg"
-            />
-            <img
-              className={styles.threadChild}
-              alt=""
-              src="/threadsImages/vector-12.svg"
-            />
-            <img
-              className={styles.avatarIcon1}
-              alt=""
-              src="/threadsImages/avatar6.svg"
-            />
+            <img className={styles.avatarIcon} alt="" src="/avatar1.svg" />
+            <img className={styles.threadChild} alt="" src="/vector-11.svg" />
+            <img className={styles.avatarIcon1} alt="" src="/avatar2.svg" />
           </div>
           <div className={styles.infosActions}>
             <div className={styles.infos}>
@@ -48,35 +36,19 @@ const ThreadsColContainer = () => {
               <img
                 className={styles.carrosselChild}
                 alt=""
-                src="/threadsImages/rectangle-92@2x.png"
+                src="/rectangle-9@2x.png"
               />
               <img
                 className={styles.carrosselChild}
                 alt=""
-                src="/threadsImages/rectangle-81@2x.png"
+                src="/rectangle-8@2x.png"
               />
             </div>
             <div className={styles.actions}>
-              <img
-                className={styles.likeIcon}
-                alt=""
-                src="/threadsImages/like2.svg"
-              />
-              <img
-                className={styles.likeIcon}
-                alt=""
-                src="/threadsImages/comment1.svg"
-              />
-              <img
-                className={styles.likeIcon}
-                alt=""
-                src="/threadsImages/repost1.svg"
-              />
-              <img
-                className={styles.likeIcon}
-                alt=""
-                src="/threadsImages/send3.svg"
-              />
+              <img className={styles.likeIcon} alt="" src="/like.svg" />
+              <img className={styles.likeIcon} alt="" src="/comment.svg" />
+              <img className={styles.likeIcon} alt="" src="/repost.svg" />
+              <img className={styles.likeIcon} alt="" src="/send.svg" />
             </div>
             <div className={styles.respostasECurtidas}>
               <div className={styles.respostas}>7 respostas</div>
@@ -87,21 +59,9 @@ const ThreadsColContainer = () => {
         </div>
         <div className={styles.thread1}>
           <div className={styles.thread2}>
-            <img
-              className={styles.avatarIcon}
-              alt=""
-              src="/threadsImages/avatar7.svg"
-            />
-            <img
-              className={styles.threadItem}
-              alt=""
-              src="/threadsImages/vector-13.svg"
-            />
-            <img
-              className={styles.avatarIcon3}
-              alt=""
-              src="/threadsImages/avatar8.svg"
-            />
+            <img className={styles.avatarIcon} alt="" src="/avatar3.svg" />
+            <img className={styles.threadItem} alt="" src="/vector-12.svg" />
+            <img className={styles.avatarIcon3} alt="" src="/avatar4.svg" />
           </div>
           <div className={styles.infosActions}>
             <div className={styles.infos}>
@@ -125,35 +85,19 @@ const ThreadsColContainer = () => {
               <img
                 className={styles.carrosselChild}
                 alt=""
-                src="/threadsImages/rectangle-92@2x.png"
+                src="/rectangle-9@2x.png"
               />
               <img
                 className={styles.carrosselChild}
                 alt=""
-                src="/threadsImages/rectangle-81@2x.png"
+                src="/rectangle-8@2x.png"
               />
             </div>
             <div className={styles.actions}>
-              <img
-                className={styles.likeIcon}
-                alt=""
-                src="/threadsImages/like2.svg"
-              />
-              <img
-                className={styles.likeIcon}
-                alt=""
-                src="/threadsImages/comment1.svg"
-              />
-              <img
-                className={styles.likeIcon}
-                alt=""
-                src="/threadsImages/repost1.svg"
-              />
-              <img
-                className={styles.likeIcon}
-                alt=""
-                src="/threadsImages/send3.svg"
-              />
+              <img className={styles.likeIcon} alt="" src="/like.svg" />
+              <img className={styles.likeIcon} alt="" src="/comment.svg" />
+              <img className={styles.likeIcon} alt="" src="/repost.svg" />
+              <img className={styles.likeIcon} alt="" src="/send.svg" />
             </div>
             <div className={styles.respostasECurtidas1}>
               <div className={styles.respostas}>7 respostas</div>
@@ -165,21 +109,9 @@ const ThreadsColContainer = () => {
       </div>
       <div className={styles.thread5}>
         <div className={styles.thread2}>
-          <img
-            className={styles.avatarIcon4}
-            alt=""
-            src="/threadsImages/avatar9.svg"
-          />
-          <img
-            className={styles.threadItem}
-            alt=""
-            src="/threadsImages/vector-14.svg"
-          />
-          <img
-            className={styles.avatarIcon3}
-            alt=""
-            src="/threadsImages/avatar10.svg"
-          />
+          <img className={styles.avatarIcon4} alt="" src="/avatar5.svg" />
+          <img className={styles.threadItem} alt="" src="/vector-13.svg" />
+          <img className={styles.avatarIcon3} alt="" src="/avatar6.svg" />
         </div>
         <div className={styles.infosActions}>
           <div className={styles.infos}>
@@ -205,35 +137,19 @@ const ThreadsColContainer = () => {
             <img
               className={styles.carrosselChild}
               alt=""
-              src="/threadsImages/rectangle-92@2x.png"
+              src="/rectangle-9@2x.png"
             />
             <img
               className={styles.carrosselChild}
               alt=""
-              src="/threadsImages/rectangle-81@2x.png"
+              src="/rectangle-8@2x.png"
             />
           </div>
           <div className={styles.actions}>
-            <img
-              className={styles.likeIcon}
-              alt=""
-              src="/threadsImages/like2.svg"
-            />
-            <img
-              className={styles.likeIcon}
-              alt=""
-              src="/threadsImages/comment1.svg"
-            />
-            <img
-              className={styles.likeIcon}
-              alt=""
-              src="/threadsImages/repost1.svg"
-            />
-            <img
-              className={styles.likeIcon}
-              alt=""
-              src="/threadsImages/send3.svg"
-            />
+            <img className={styles.likeIcon} alt="" src="/like.svg" />
+            <img className={styles.likeIcon} alt="" src="/comment.svg" />
+            <img className={styles.likeIcon} alt="" src="/repost.svg" />
+            <img className={styles.likeIcon} alt="" src="/send.svg" />
           </div>
           <div className={styles.respostasECurtidas2}>
             <div className={styles.respostas}>7 respostas</div>
@@ -244,21 +160,9 @@ const ThreadsColContainer = () => {
       </div>
       <div className={styles.thread5}>
         <div className={styles.thread2}>
-          <img
-            className={styles.avatarIcon}
-            alt=""
-            src="/threadsImages/avatar11.svg"
-          />
-          <img
-            className={styles.threadItem}
-            alt=""
-            src="/threadsImages/vector-15.svg"
-          />
-          <img
-            className={styles.avatarIcon3}
-            alt=""
-            src="/threadsImages/avatar12.svg"
-          />
+          <img className={styles.avatarIcon} alt="" src="/avatar7.svg" />
+          <img className={styles.threadItem} alt="" src="/vector-14.svg" />
+          <img className={styles.avatarIcon3} alt="" src="/avatar8.svg" />
         </div>
         <div className={styles.infosActions}>
           <div className={styles.infos}>
@@ -284,35 +188,19 @@ const ThreadsColContainer = () => {
             <img
               className={styles.carrosselChild}
               alt=""
-              src="/threadsImages/rectangle-92@2x.png"
+              src="/rectangle-9@2x.png"
             />
             <img
               className={styles.carrosselChild}
               alt=""
-              src="/threadsImages/rectangle-81@2x.png"
+              src="/rectangle-8@2x.png"
             />
           </div>
           <div className={styles.actions}>
-            <img
-              className={styles.likeIcon}
-              alt=""
-              src="/threadsImages/like2.svg"
-            />
-            <img
-              className={styles.likeIcon}
-              alt=""
-              src="/threadsImages/comment1.svg"
-            />
-            <img
-              className={styles.likeIcon}
-              alt=""
-              src="/threadsImages/repost1.svg"
-            />
-            <img
-              className={styles.likeIcon}
-              alt=""
-              src="/threadsImages/send3.svg"
-            />
+            <img className={styles.likeIcon} alt="" src="/like.svg" />
+            <img className={styles.likeIcon} alt="" src="/comment.svg" />
+            <img className={styles.likeIcon} alt="" src="/repost.svg" />
+            <img className={styles.likeIcon} alt="" src="/send.svg" />
           </div>
           <div className={styles.respostasECurtidas1}>
             <div className={styles.respostas}>7 respostas</div>

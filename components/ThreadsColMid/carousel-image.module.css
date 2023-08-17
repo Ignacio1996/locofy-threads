@@ -1,7 +1,0 @@
-.carrosselChild {
-  position: relative;
-  border-radius: var(--br-5xs);
-  width: 390px;
-  height: 376.89px;
-  object-fit: cover;
-}
