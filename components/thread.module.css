@@ -1,7 +1,7 @@
 .avatarIcon {
   position: relative;
-  width: 41px;
-  height: 39px;
+  width: 36px;
+  height: 36px;
 }
 .threadChild {
   flex: 1;
@@ -63,7 +63,7 @@
   align-self: stretch;
   justify-content: space-between;
 }
-.iAmExcited {
+.temporDolorProident {
   align-self: stretch;
   position: relative;
   font-size: var(--font-size-smi);
@@ -76,6 +76,20 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-7xs);
+}
+.carrosselChild {
+  position: relative;
+  border-radius: var(--br-5xs);
+  width: 238px;
+  height: 230px;
+  object-fit: cover;
+}
+.carrossel {
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
 }
 .likeIcon {
   position: relative;
@@ -99,7 +113,7 @@
 .respostasECurtidasChild {
   position: relative;
   border-radius: 50%;
-  background-color: var(--color-darkgray);
+  background-color: var(--color-dimgray);
   width: 2px;
   height: 2px;
 }
@@ -110,7 +124,7 @@
   justify-content: flex-start;
   gap: var(--gap-9xs);
   font-size: var(--font-size-smi);
-  color: var(--color-darkgray);
+  color: var(--color-dimgray);
 }
 .infosActions,
 .thread {

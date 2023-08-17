@@ -1,8 +1,8 @@
-import styles from "./new-thread.module.css";
-const NewThread = () => {
+import styles from "./ThreadsColMid/new-thread.module.css";
+const NewThreadInput = () => {
   return (
-    <div className={styles.thread}>
-      <div className={styles.thread1}>
+    <div className={styles.newthreadinput}>
+      <div className={styles.thread}>
         <img
           className={styles.avatarIcon}
           alt=""
@@ -36,4 +36,4 @@ const NewThread = () => {
   );
 };
 
-export default NewThread;
+export default NewThreadInput;
