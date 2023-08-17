@@ -37,14 +37,14 @@ export default function Home() {
   };
 
   const deleteThread = async (id) => {
-    console.log("page.js 38 | deleting...");
+    console.log("page.js 38 | deleting id", id);
     try {
-      const request = await fetch("api/thread", {
+      const request = await fetch(`api/thread`, {
         method: "DELETE",
-        // headers: {
-        //   "Content-type": "application/json",
-        // },
-        body: JSON.stringify({ threadId: id }),
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ id }),
       });
 
       const response = await request.json();
