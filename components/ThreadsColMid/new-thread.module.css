@@ -1,0 +1,81 @@
+.avatarIcon {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+.infos,
+.thread1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.infos {
+  border: 0;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-sm);
+  background-color: transparent;
+  align-items: flex-start;
+}
+.paperclipIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.actions1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sendIcon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.actions2 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-5xs) var(--padding-6xs);
+  background-color: var(--color-gray-100);
+  border-radius: var(--br-21xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.actions,
+.infosActions,
+.thread {
+  display: flex;
+  align-items: flex-start;
+}
+.actions {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.infosActions,
+.thread {
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.infosActions {
+  flex: 1;
+  flex-direction: column;
+}
+.thread {
+  align-self: stretch;
+  border-bottom: 1px solid var(--color-darkslategray);
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-direction: row;
+  padding: var(--padding-base) var(--padding-base) var(--padding-base)
+    var(--padding-xs);
+}
