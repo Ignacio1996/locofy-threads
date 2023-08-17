@@ -214,6 +214,7 @@
 }
 .threadscontainer {
   flex: 1;
+  background-color: var(--color-gray-200);
   overflow-y: auto;
   flex-direction: column;
   padding: 0 0 var(--padding-27xl);
