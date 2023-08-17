@@ -1,57 +1,6 @@
 import connectDB from "@/app/db/mongodb";
-import Thread from "@/app/models/thread";
+import { Thread } from "@/app/models/thread";
 import { NextResponse } from "next/server";
-
-// await connectDB();
-
-// export default async function handler(req, res) {
-//   if (req.method === "POST") {
-//     // Process a POST request
-//     try {
-//       console.log("route.js 6 | reached route!");
-//       await connectDB();
-//       await Thread.create({ thread: "hello world!", date: Date.now() });
-
-//       return NextResponse.json({ success: "thread created!" });
-//     } catch (error) {
-//       console.log("route.js 8 | error reaching route");
-//     }
-//   } else if (req.method === "DELETE") {
-//     // Handle any other HTTP method
-//     try {
-//       const { id } = req.body;
-//       console.log("route.js 47 | deleting at id", id);
-//       await connectDB();
-//       await Thread.findByIdAndDelete(id);
-//       return NextResponse.json({ success: "thread deleted!" });
-//     } catch (error) {
-//       console.log("route.js | error deleting thread");
-//       return NextResponse.json({ error: "Failed to delete thread" });
-//     }
-//   } else if (req.method === "GET") {
-//     try {
-//       await connectDB();
-//       const threads = await Thread.find();
-//       console.log("route.js 20 | threads", threads.length);
-//       return NextResponse.json({ threads });
-//     } catch (error) {
-//       console.log("route.js | error retrieving threads");
-//       return NextResponse.json({ error: "Failed to retrieve threads" });
-//     }
-//   } else if (req.method === "PUT") {
-//     try {
-//       const { id, thread } = req.body;
-//       await connectDB();
-//       await Thread.findByIdAndUpdate(id, { thread }, { new: true });
-//       return NextResponse.json({ success: "thread updated!" });
-//     } catch (error) {
-//       console.log("route.js | error updating thread");
-//       return NextResponse.json({ error: "Failed to update thread" });
-//     }
-//   } else {
-//     return NextResponse.json({ error: "No specified method" });
-//   }
-// }
 
 export async function POST(req) {
   try {
@@ -59,11 +8,15 @@ export async function POST(req) {
     const request = await req.json();
     console.log("route.js 59 | request from client", request);
     await connectDB();
-    await Thread.create({ thread: "hello world!", date: Date.now() });
 
-    return NextResponse.json({ success: "thread created!" });
+    if (request.type === "like") {
+      await Thread.findByIdAndUpdate(request.threadId, { $inc: { likes: 1 } });
+    } else {
+      await Thread.create({ content: request.thread, date: Date.now() });
+      return NextResponse.json({ success: "thread created!" });
+    }
   } catch (error) {
-    console.log("route.js 8 | error reaching route");
+    console.log("route.js 8 | error reaching route", error);
   }
 }
 

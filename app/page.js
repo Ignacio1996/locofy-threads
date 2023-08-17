@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const [threads, setThreads] = useState([]);
+  const [inputValue, setInputValue] = useState("");
 
   const createThread = async () => {
     console.log("page.js 4 | posting to server");
@@ -12,7 +13,7 @@ export default function Home() {
         headers: {
           "Content-type": "application/json",
         },
-        body: JSON.stringify({ thread: "Hello World" }),
+        body: JSON.stringify({ thread: inputValue }),
       });
 
       const response = await request.json();
@@ -56,6 +57,20 @@ export default function Home() {
     }
   };
 
+  const like = async (threadId) => {
+    try {
+      const request = await fetch("api/thread", {
+        method: "POST",
+        body: JSON.stringify({ type: "like", threadId }),
+      });
+      // const threads = await request.json();
+      getThreads();
+      console.log("page.js 31 | threads in client", typeof threads);
+    } catch (error) {
+      console.log("page.js | error getting threads", error.message);
+    }
+  };
+
   useEffect(() => {
     getThreads();
   }, []);
@@ -63,6 +78,12 @@ export default function Home() {
   return (
     <main>
       <h3>Threads Clone Backend Update</h3>
+      <input
+        value={inputValue}
+        onChange={(e) => {
+          setInputValue(e.target.value);
+        }}
+      />
       <button onClick={createThread}>Create Thread</button>
       <div>
         <h4>Threads:</h4>
@@ -70,9 +91,11 @@ export default function Home() {
           {threads &&
             threads?.threads?.map((thread, index) => (
               <li key={index}>
-                {thread.thread}{" "}
+                {thread.thread}
+                <button onClick={() => like(thread._id)}>Like</button>
+                <div>Likes {thread.likes || 0}</div>
                 <button onClick={() => deleteThread(thread._id)}>x</button>
-              </li> // Modify according to your thread structure
+              </li>
             ))}
         </ul>
       </div>
