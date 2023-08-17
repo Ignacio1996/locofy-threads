@@ -8,7 +8,7 @@ export default function Home() {
   const createThread = async () => {
     console.log("page.js 4 | posting to server");
     try {
-      const request = await fetch("api/thread", {
+      await fetch("api/thread", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -16,9 +16,6 @@ export default function Home() {
         body: JSON.stringify({ thread: inputValue }),
       });
 
-      const response = await request.json();
-      console.log("page.js 15 | response", response);
-      // Refresh the threads after creating a new one
       getThreads();
     } catch (error) {
       console.log("page.js 13 | error", error.message);
@@ -63,7 +60,6 @@ export default function Home() {
         method: "POST",
         body: JSON.stringify({ type: "like", threadId }),
       });
-      // const threads = await request.json();
       getThreads();
       console.log("page.js 31 | threads in client", typeof threads);
     } catch (error) {
@@ -91,6 +87,7 @@ export default function Home() {
           {threads &&
             threads?.threads?.map((thread, index) => (
               <li key={index}>
+                <span>{thread.user}</span>
                 {thread.thread}
                 <button onClick={() => like(thread._id)}>Like</button>
                 <div>Likes {thread.likes || 0}</div>

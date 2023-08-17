@@ -4,6 +4,7 @@ const threadSchema = new mongoose.Schema({
   content: { type: String, required: true },
   timestamp: { type: Date, default: Date.now },
   likes: { type: Number, default: 0 },
+  user: { type: String, default: "Nico @ Locofy" },
   // comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
 });
 
