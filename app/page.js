@@ -1,95 +1,81 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [threads, setThreads] = useState([]);
+
+  const createThread = async () => {
+    console.log("page.js 4 | posting to server");
+    try {
+      const request = await fetch("api/thread", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ thread: "Hello World" }),
+      });
+
+      const response = await request.json();
+      console.log("page.js 15 | response", response);
+      // Refresh the threads after creating a new one
+      getThreads();
+    } catch (error) {
+      console.log("page.js 13 | error", error.message);
+    }
+  };
+
+  const getThreads = async () => {
+    console.log("page.js 27 | getting threads...");
+    try {
+      const request = await fetch("api/thread");
+      const threads = await request.json();
+      setThreads(threads);
+      console.log("page.js 31 | threads in client", typeof threads);
+    } catch (error) {
+      console.log("page.js | error getting threads", error.message);
+    }
+  };
+
+  const deleteThread = async (id) => {
+    console.log("page.js 38 | deleting...");
+    try {
+      const request = await fetch("api/thread", {
+        method: "DELETE",
+        // headers: {
+        //   "Content-type": "application/json",
+        // },
+        body: JSON.stringify({ threadId: id }),
+      });
+
+      const response = await request.json();
+      console.log("page.js 48 | response", response);
+      getThreads();
+      console.log("page.js 51 | deleted!");
+    } catch (error) {
+      console.log("page.js 13 | error", error.message);
+    }
+  };
+
+  useEffect(() => {
+    getThreads();
+  }, []);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    <main>
+      <h3>Threads Clone Backend Update</h3>
+      <button onClick={createThread}>Create Thread</button>
+      <div>
+        <h4>Threads:</h4>
+        <ul>
+          {threads &&
+            threads?.threads?.map((thread, index) => (
+              <li key={index}>
+                {thread.thread}{" "}
+                <button onClick={() => deleteThread(thread._id)}>x</button>
+              </li> // Modify according to your thread structure
+            ))}
+        </ul>
       </div>
     </main>
-  )
+  );
 }
