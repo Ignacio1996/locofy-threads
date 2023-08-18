@@ -1,11 +1,16 @@
 import styles from "./thread.module.css";
-const Thread5 = ({ username, timeSpentSincePosted, thread, commentsShown }) => {
+const ThreadContainer = ({
+  username,
+  timeSpentSincePosted,
+  thread,
+  commentsShown,
+}) => {
   return (
     <div className={styles.thread}>
       <div className={styles.thread1}>
-        <img className={styles.avatarIcon} alt="" src="/avatar.svg" />
+        <img className={styles.avatarIcon} alt="" src="/avatar2.svg" />
         <img className={styles.threadChild} alt="" src="/vector-111.svg" />
-        <img className={styles.avatarIcon1} alt="" src="/avatar1.svg" />
+        <img className={styles.avatarIcon1} alt="" src="/avatar11.svg" />
       </div>
       <div className={styles.infosActions}>
         <div className={styles.infos}>
@@ -52,4 +57,4 @@ const Thread5 = ({ username, timeSpentSincePosted, thread, commentsShown }) => {
   );
 };
 
-export default Thread5;
+export default ThreadContainer;
