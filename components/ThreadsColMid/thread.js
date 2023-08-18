@@ -4,6 +4,7 @@ const ThreadContainer = ({
   timeSpentSincePosted,
   thread,
   commentsShown,
+  likes,
 }) => {
   return (
     <div className={styles.thread}>
@@ -47,7 +48,7 @@ const ThreadContainer = ({
         </div>
         {commentsShown && (
           <div className={styles.respostasECurtidas}>
-            <div className={styles.respostas}>7 respostas</div>
+            <div className={styles.respostas}>{likes}</div>
             <div className={styles.respostasECurtidasChild} />
             <div className={styles.respostas}>59 curtidas</div>
           </div>
