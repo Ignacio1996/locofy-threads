@@ -1,16 +1,30 @@
 import NewThreadInput from "./new-thread-input";
 import ThreadContainer from "./thread";
 import styles from "./threads-col-container.module.css";
-const ThreadsColContainerColumn = () => {
+const ThreadsColContainerColumn = ({
+  inputValue,
+  setInputValue,
+  createThread,
+  threads,
+}) => {
   return (
     <div className={styles.threadscontainer}>
-      <NewThreadInput />
-      <ThreadContainer
-        username="arochinski"
-        timeSpentSincePosted="2min"
-        thread="It took so long for this desktop version of Threads to come out, but I'm really excited to start posting tips and content directly from the computer"
-        commentsShown
+      <NewThreadInput
+        inputValue={setInputValue}
+        setInputValue={setInputValue}
+        createThread={createThread}
       />
+      {threads &&
+        threads.threads?.map((thread) => {
+          return (
+            <ThreadContainer
+              username={thread.username}
+              timeSpentSincePosted={thread.date}
+              thread={thread.thread}
+              commentsShown={false}
+            />
+          );
+        })}
       <ThreadContainer
         username="aura"
         timeSpentSincePosted="1min"
