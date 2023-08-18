@@ -16,14 +16,8 @@ const NewThreadInput = () => {
           placeholder="Share something cool today"
         />
         <div className={styles.actions}>
-          <div className={styles.actions1}>
-            <img
-              className={styles.paperclipIcon}
-              alt=""
-              src="/threadsImages/paperclip.svg"
-            />
-          </div>
-          <button className={styles.actions2}>
+          <img className={styles.actionsIcon} alt="" src="/actions@2x.png" />
+          <button className={styles.actions1}>
             <img
               className={styles.sendIcon}
               alt=""

@@ -19,18 +19,11 @@
   background-color: transparent;
   align-items: flex-start;
 }
-.paperclipIcon {
-  position: relative;
-  width: 24px;
-  height: 24px;
+.actionsIcon {
+  max-width: 100%;
   overflow: hidden;
-  flex-shrink: 0;
-}
-.actions1 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  max-height: 100%;
+  object-fit: cover;
 }
 .sendIcon {
   position: relative;
@@ -40,11 +33,11 @@
   flex-shrink: 0;
 }
 .actions,
-.actions2 {
+.actions1 {
   display: flex;
   flex-direction: row;
 }
-.actions2 {
+.actions1 {
   cursor: pointer;
   border: 0;
   padding: var(--padding-4xs) var(--padding-5xs) var(--padding-6xs);
