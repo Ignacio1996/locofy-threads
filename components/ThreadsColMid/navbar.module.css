@@ -1,0 +1,60 @@
+.threadsLogoIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.threads {
+  position: relative;
+  line-height: 19px;
+  font-weight: 500;
+}
+.logo {
+  width: 401px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-base) var(--padding-base) var(--padding-base)
+    var(--padding-xs);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-9xs);
+}
+.hamburgerIcon,
+.logo2Icon {
+  position: relative;
+  width: 22.01px;
+  height: 22px;
+}
+.hamburgerIcon {
+  width: 20px;
+  height: 10px;
+}
+.righInfos {
+  justify-content: flex-start;
+  gap: var(--gap-3xl);
+}
+.avatar,
+.nav,
+.righInfos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.avatar {
+  width: 400px;
+  height: 56px;
+  padding: var(--padding-base) var(--padding-base) var(--padding-base)
+    var(--padding-xs);
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+.nav {
+  align-self: stretch;
+  border-bottom: 1px solid var(--color-dimgray-100);
+  justify-content: space-between;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--color-white);
+  font-family: var(--font-rebond-grotesque);
+}

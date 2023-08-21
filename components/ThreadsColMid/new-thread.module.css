@@ -1,0 +1,73 @@
+.avatarIcon {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+.infos,
+.thread {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.infos {
+  border: 0;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-sm);
+  background-color: transparent;
+  align-items: flex-start;
+}
+.actionsIcon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.sendIcon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.actions,
+.actions1 {
+  display: flex;
+  flex-direction: row;
+}
+.actions1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-5xs) var(--padding-6xs);
+  background-color: var(--color-gray-100);
+  border-radius: var(--br-21xl);
+  align-items: center;
+  justify-content: center;
+}
+.actions {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.infosActions,
+.newthreadinput {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.infosActions {
+  flex: 1;
+  flex-direction: column;
+}
+.newthreadinput {
+  align-self: stretch;
+  border-bottom: 1px solid var(--color-darkslategray);
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-direction: row;
+  padding: var(--padding-base) var(--padding-base) var(--padding-base)
+    var(--padding-xs);
+}
